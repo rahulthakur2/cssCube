@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+    .cube{
+        margin: 80px;
+        margin-top: 200px;
+        position: relative;
+        height: 300px;
+        width: 300px;
+        /* background-color: red; */
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg);
+        animation: animate 4s linear infinite;
+    }
+
+    .face{
+        position: absolute;
+        top:0%;
+        bottom: 0%;
+        height: 100%;
+        width: 100%;
+        background:linear-gradient(#151515,#00ec00);
+        transform-style: preserve-3d;
+    }
+
+    media quotient{
+
+    }
+
+    @keyframes animate {
+        0%{
+            transform: rotateX(-30deg) rotateY(0deg) ;
+        }
+        100%{
+            transform: rotateX(-30deg) rotateY(360deg);
+        }
+    }
+    .one{
+        transform: translateZ(150px);
+    }
+    .two{
+        transform: rotateY(90deg) translateZ(150px);
+    }
+    .three{
+        transform: rotateY(90deg) translateZ(-150px);
+    }
+    .four{
+        transform: translateZ(-150px);
+    }
+    .five{
+        background: rgb(65, 61, 61);
+        transform: rotateX(90deg) translateZ(150px) ;
+    }
+    .six{
+        background: #00ec00;
+        filter: blur(20px);
+        transform: rotateX(90deg) translateZ(-200px);
+    }
+    .cubeLeft .face{
+        top:60%;
+    }
+
+    .cubeRight .face{
+        top:-20%;
+    }
+    
+</style>
+<body>
+
+    <div class="cube">
+        <div class="face one"></div>
+        <div class="face two"></div>
+        <div class="face three"></div>
+        <div class="face four"></div>
+        <div class="face five"></div>
+        <div class="face six"></div>
+
+    </div>
+
+    <div class="cube cubeLeft">
+        <div style="background:linear-gradient(#151515,#eb13a3);" class="face one" ></div>
+        <div style="background:linear-gradient(#151515,#eb13a3);" class="face two" ></div>
+        <div style="background:linear-gradient(#151515,#eb13a3);" class="face three"></div>
+        <div style="background:linear-gradient(#151515,#eb13a3);" class="face four"></div>
+        <div style="background: rgb(65, 61, 61);" class="face five"></div>
+        <div style="background:#eb13a3;" class="face six"></div>
+
+    </div>
+
+
+    <div class="cube cubeRight">
+        <div style="background:linear-gradient(#151515,#ee3d43);" class="face one"></div>
+        <div style="background:linear-gradient(#151515,#ee3d43);" class="face two"></div>
+        <div style="background:linear-gradient(#151515,#ee3d43);" class="face three"></div>
+        <div style="background:linear-gradient(#151515,#ee3d43);" class="face four"></div>
+        <div style="background: rgb(65, 61, 61);" class="face five"></div>
+        <div style="background:#ee3d43;" class="face six"></div>
+
+    </div>
+    
+</body>
+</html>
